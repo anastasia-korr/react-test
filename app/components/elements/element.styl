@@ -1,0 +1,42 @@
+.element
+  border: 2px dashed #ccc
+  min-height 300px
+  position relative
+  width (100%/3) - 2
+  margin 1%
+  float left
+  transition all 300ms ease-out
+
+  *
+    transition all 300ms ease-out
+
+  h4
+    text-align center
+    outline none
+    line-height 26px
+
+    &:focus
+      border-bottom 1px solid #111
+
+  &:before
+    content "Drag Element here"
+    position absolute
+    top 50%
+    left 50%
+    transform translate(-50%, -50%)
+    -moz-transform translate(-50%, -50%)
+    -webkit-transform translate(-50%, -50%)
+    font-size 16px
+    color #ccc
+
+  &:hover
+    border-color #111
+
+    &:before
+      color #111
+
+  &.active
+    border-color red
+
+    &:before
+      color red
